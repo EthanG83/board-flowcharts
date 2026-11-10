@@ -1,0 +1,17 @@
+{
+  "id": "./",
+  "name": "Board Flowcharts",
+  "short_name": "Flowcharts",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#030305",
+  "theme_color": "#030305",
+  "icons": [
+    {
+      "src": "./apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

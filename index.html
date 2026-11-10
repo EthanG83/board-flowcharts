@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>First Aid Step 1 2026 | Board Flowcharts</title>
+<meta name="theme-color" content="#030305">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Board Flowcharts">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<style>
+:root{--paper:#f1f5f4;--white:#fff;--ink:#152b32;--muted:#426069;--accent:#07635a;--accent-dark:#08443f;--tint:#e6f4ef;--line:#aec4c3;--soft:#dce8e6;--amber:#fff3d9;--amber-line:#c88d29}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);line-height:1.45}a{color:var(--accent-dark);text-underline-offset:.17em}a:focus-visible,button:focus-visible{outline:3px solid #008475;outline-offset:3px}h1,h2,h3,p{margin:0}
+.wrap{width:min(1150px,calc(100% - 48px));margin-inline:auto}.mast{background:#102f33;color:#fff;padding:47px 0 41px}.mast .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:22px}.eyebrow{font-size:.76rem;font-weight:750;letter-spacing:.14em;text-transform:uppercase;color:#a9e4d4}.mast h1{font-size:clamp(2rem,5vw,3.6rem);line-height:1.04;letter-spacing:-.045em;margin:11px 0 15px}.mast p{max-width:600px;color:#dfefeb}.toolbar[hidden],.pearl[hidden]{display:none}.toolbar{display:flex;gap:8px;flex-wrap:wrap}.toolbar button,.reveal{border:1px solid var(--line);border-radius:6px;background:var(--white);color:var(--accent-dark);font:inherit;font-size:.85rem;font-weight:700;padding:8px 11px;cursor:pointer}.toolbar button[aria-pressed=true]{background:#ade5d4}.toolbar button:hover,.reveal:hover{background:var(--tint)}
+.index{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;padding:18px 0 26px}.index a{background:var(--white);color:var(--ink);border:1px solid var(--soft);border-radius:8px;display:block;padding:9px 11px;text-decoration:none;font-size:.83rem;font-weight:660}.index a:hover{border-color:var(--accent)}.index span{font-size:.7rem;color:var(--accent);margin-right:4px;font-variant-numeric:tabular-nums}
+.chart{padding:25px 25px 21px;margin:0 0 22px;background:var(--white);border:1px solid var(--soft);border-radius:14px;scroll-margin-top:12px}.chart-heading{display:flex;gap:12px;align-items:center;margin-bottom:19px}.number{font-weight:760;color:var(--accent);background:var(--tint);padding:5px 9px;border-radius:5px;font-size:.84rem}.chart h2{font-size:clamp(1.22rem,3vw,1.65rem);line-height:1.16;letter-spacing:-.022em}
+.start{max-width:640px;margin-inline:auto;text-align:center;color:white;background:var(--accent-dark);padding:10px 16px;border-radius:8px;position:relative}.start strong{font-size:1.02rem}.start p{color:#e1f4ee;font-size:.89rem;margin-top:3px}
+.branches{display:grid;position:relative;padding-top:33px;--cols:3;--half:16.6667%;grid-template-columns:repeat(var(--cols),minmax(0,1fr))}.columns-2{--cols:2;--half:25%}.columns-4{--cols:4;--half:12.5%}.branches::before{content:"";position:absolute;left:50%;top:0;height:17px;border-left:1px solid var(--line)}.branches::after{content:"";position:absolute;left:var(--half);right:var(--half);top:16px;border-top:1px solid var(--line)}.branch{position:relative;margin:0 6px;min-width:0}.branch::before{content:"";position:absolute;left:50%;top:-17px;height:17px;border-left:1px solid var(--line)}
+.decision{background:var(--tint);border:1px solid #c9e4da;border-radius:8px 8px 4px 4px;padding:10px 11px}.decision h3{font-size:.93rem;line-height:1.28;color:var(--accent-dark)}.decision p{font-size:.84rem;color:var(--muted);margin-top:4px}
+.paths{margin-top:8px;border-left:1px solid var(--line);padding-left:9px;margin-left:6px}.path{position:relative;padding:8px 9px;margin-bottom:7px;border:1px solid var(--soft);border-radius:5px;background:#fbfdfc;font-size:.85rem;overflow-wrap:break-word}.path::before{content:"";position:absolute;left:-10px;top:15px;width:9px;border-top:1px solid var(--line)}.clue{color:var(--ink)}.result{display:flex;gap:6px;align-items:baseline;margin-top:4px}.arrow{color:var(--accent);font-weight:750}.answer,.next{font-weight:730;color:var(--accent-dark)}.next{margin-top:6px}.reveal{padding:2px 6px;font-size:.77rem}.pearl{margin:16px 6px 0;padding:9px 11px;background:var(--amber);border-left:3px solid var(--amber-line);border-radius:4px;display:flex;align-items:baseline;gap:8px;font-size:.85rem}.pearl strong{white-space:nowrap;color:#6d4b12}.citations{color:var(--muted);font-size:.75rem;margin:9px 6px 0}.citations a{margin-left:2px}
+.sources{padding:20px 24px 28px;margin:0 0 30px}.sources h2{font-size:1.12rem}.sources ol{padding-left:22px;columns:2;column-gap:35px;font-size:.82rem}.sources li{margin:0 0 5px;break-inside:avoid;scroll-margin-top:12px}.sources li:target{background:var(--amber)}
+@media(max-width:860px){.mast .wrap{grid-template-columns:1fr}.index{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.wrap{width:calc(100% - 24px)}.mast{padding:32px 0 27px}.chart{padding:16px 12px}.index a{padding:8px;font-size:.76rem}.chart-heading{margin-bottom:13px}.branches{display:block;margin:0 0 0 11px;padding:12px 0 0 13px;border-left:1px solid var(--line)}.branches::before,.branches::after{content:none}.branch{margin:0 0 14px}.branch::before{top:15px;left:-13px;width:13px;height:0;border-left:0;border-top:1px solid var(--line)}.pearl{display:block}.pearl strong{display:block;margin-bottom:2px}.sources ol{columns:1}}
+@media print{@page{size:landscape;margin:12mm}*{print-color-adjust:exact;-webkit-print-color-adjust:exact}body{background:white}.wrap{width:100%}.mast{padding:9px 0;margin-bottom:14px}.mast .wrap{display:block;padding:0 12px}.mast h1{font-size:20pt;margin:4px 0}.mast p{font-size:9pt}.toolbar,.index,.reveal{display:none!important}.chart{break-inside:avoid;break-after:page;border:none;padding:4px 0;margin:0}.chart-heading{margin-bottom:12px}.chart h2{font-size:17pt}.branches{display:grid;margin:0;padding:33px 0 0;border:0}.branches::before,.branches::after{content:""}.branch{margin:0 6px}.branch::before{top:-17px;left:50%;height:17px;width:0;border:0;border-left:1px solid var(--line)}.path,.decision p,.pearl{font-size:9pt}.answer[hidden],.pearl[hidden]{display:block!important}.sources{margin:0;padding:0}.sources ol{columns:2}}
+
+/* Progressive disclosure is added when the chart controls are ready. */
+.study .chart[hidden] { display: none; }
+.study .index a[aria-current="true"] {
+  color: var(--accent-dark);
+  border-color: var(--accent);
+  background: var(--tint);
+}
+.starting-label { margin-top: 18px; font-size: .87rem; font-weight: 750; color: var(--muted); }
+.starting-label + .index { padding-top: 7px; }
+.study .chart-heading h2 { flex: 1; }
+.starting-link { font-size: .79rem; white-space: nowrap; }
+.study .start { padding: 15px 17px; }
+.study .start p { max-width: 510px; margin-inline: auto; }
+.disclosure-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 34px;
+  max-width: 100%;
+  margin-top: 8px;
+  padding: 4px 8px;
+  border: 1px solid #a8cbc2;
+  border-radius: 6px;
+  background: #fff;
+  color: var(--accent-dark);
+  font: inherit;
+  font-size: .78rem;
+  font-weight: 720;
+  line-height: 1.22;
+  text-align: left;
+  cursor: pointer;
+}
+.disclosure-toggle:hover { background: #d8eee7; border-color: var(--accent); }
+.start .disclosure-toggle { margin-top: 10px; padding-inline: 10px; }
+.disclosure-toggle svg { width: 15px; height: 15px; flex: none; transition: transform .28s ease; }
+.disclosure-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
+.disclosure-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  visibility: hidden;
+  transition: grid-template-rows .3s ease, opacity .22s ease, visibility 0s linear .3s;
+}
+.disclosure-panel[data-open] {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+.disclosure-inner { min-height: 0; overflow: hidden; }
+.study .result {
+  display: block;
+  position: relative;
+  margin: 11px 0 1px;
+  padding: 7px 9px;
+  border: 1px solid #c9e4da;
+  border-radius: 5px;
+  background: var(--tint);
+}
+.study .result::before {
+  content: "";
+  position: absolute;
+  height: 11px;
+  left: 12px;
+  bottom: 100%;
+  border-left: 1px solid var(--line);
+}
+.study .result .arrow { display: none; }
+.study .supplement { padding-top: 2px; }
+.sources summary { cursor: pointer; color: var(--accent-dark); font-weight: 700; }
+.sources summary:hover { text-decoration: underline; }
+@media screen and (max-width: 650px) {
+  .study .chart-heading { flex-wrap: wrap; column-gap: 8px; row-gap: 4px; }
+  .starting-link { margin-left: auto; }
+  .disclosure-toggle { min-height: 42px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .disclosure-panel, .disclosure-toggle svg { transition: none; }
+}
+@media print {
+  .study .chart[hidden] { display: block !important; }
+  .disclosure-panel { display: block; visibility: visible; opacity: 1; }
+  .disclosure-inner { overflow: visible; }
+  .starting-label, .starting-link, .disclosure-toggle, .sources summary { display: none !important; }
+  .study .result { margin: 6px 0 0; padding: 3px 5px; }
+  .study .result::before { height: 6px; }
+}
+
+
+
+html { background: #030305; color-scheme: dark; }
+body { background: #030305; color: #f0eeff; }
+body.map-ready > .mast { display: none; }
+main.wrap { width: 100%; }
+.map-viewport {
+  position: relative;
+  height: calc(100dvh - 84px);
+  min-height: 280px;
+  overflow: clip;
+  background: #030305;
+  border-bottom: 1px solid #27243b;
+  cursor: grab;
+  touch-action: none;
+}
+.map-viewport:focus-visible { outline: 2px solid #64f6e7; outline-offset: -3px; }
+.map-viewport.is-panning, .map-viewport.is-panning .tree-toggle { cursor: grabbing; }
+.map-tree { position: absolute; inset: 0 auto auto 0; width: max-content; user-select: none; }
+.tree-row {
+  --neon: #bc9aff;
+  --node-fill: #191125;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.depth-1 { --neon: #6dceff; --node-fill: #0b1a25; }
+.depth-2 { --neon: #62f5c5; --node-fill: #0b211e; }
+.depth-3 { --neon: #ff9cdb; --node-fill: #231326; }
+.tree-box {
+  position: relative;
+  flex: none;
+  width: clamp(205px, 27vw, 264px);
+  padding: 14px 26px 14px 15px;
+  border: 1px solid color-mix(in srgb, var(--neon) 62%, transparent);
+  border-radius: 15px;
+  background: var(--node-fill);
+  color: #f8f6ff;
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.4;
+  box-shadow: 0 0 18px color-mix(in srgb, var(--neon) 16%, transparent);
+}
+.tree-box small { display: block; margin-top: 5px; color: #ccd2e4; font-size: 12px; font-weight: 400; }
+.tree-toggle {
+  position: absolute;
+  right: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 29px;
+  height: 29px;
+  display: grid;
+  place-items: center;
+  padding: 0 0 2px;
+  border-radius: 50%;
+  border: 1px solid var(--neon);
+  background: #090910;
+  color: var(--neon);
+  font: 700 22px/1 system-ui, sans-serif;
+  cursor: pointer;
+}
+.tree-toggle:hover { background: var(--neon); color: #07070b; }
+.tree-children {
+  margin-left: 68px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  animation: grow .25s ease-out;
+}
+.tree-children[hidden] { display: none; }
+.tree-connectors {
+  position: absolute;
+  right: 100%;
+  top: 0;
+  width: 68px;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+  filter: drop-shadow(0 0 3px var(--neon));
+}
+.tree-connectors path {
+  fill: none;
+  stroke: var(--neon);
+  stroke-width: 1.7px;
+  stroke-linecap: round;
+}
+@keyframes grow { from { opacity: 0; } to { opacity: 1; } }
+.map-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  padding: 14px 20px;
+  background: #0c0b12;
+  color: #ded9f4;
+  font-size: .86rem;
+}
+.map-controls select, .map-controls button {
+  font: inherit;
+  min-height: 37px;
+  max-width: 100%;
+  padding: 7px 11px;
+  border: 1px solid #423d5a;
+  border-radius: 9px;
+  color: #f2edff;
+  background: #171323;
+}
+.map-controls button { cursor: pointer; }
+.map-controls button:hover, .map-controls select:hover { border-color: #bc9aff; }
+.map-hint { margin-left: auto; color: #b3adc8; }
+body.map-ready .sources { margin: 0; padding: 12px 20px 22px; }
+body.map-ready .sources a, body.map-ready .sources summary { color: #b6aaff; }
+@media (prefers-reduced-motion: reduce) { .tree-children { animation: none; } }
+@media (max-width: 620px) {
+  .map-viewport { height: calc(100dvh - 138px); }
+  .map-controls { padding: 10px 12px; }
+  .map-hint { width: 100%; margin-left: 0; }
+}
+@media print {
+  html, body { background: white; color: black; color-scheme: light; }
+  .map-controls, .tree-toggle { display: none; }
+  .map-viewport { height: auto; min-height: 0; overflow: visible; border: 0; background: white; }
+  .map-tree { position: static; transform: none !important; zoom: .65; }
+  .tree-box { color: #101020; background: #f5f2fc; box-shadow: none; }
+  .tree-box small { color: #303447; }
+  .tree-connectors { filter: none; }
+  body.map-ready .sources a, body.map-ready .sources summary { color: #423663; }
+}
+
+html.map-fullscreen { overflow: hidden; }
+main.map-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  margin: 0;
+  background: #030305;
+}
+main.map-fullscreen:fullscreen { height: 100%; }
+main.map-fullscreen .map-viewport { height: 100%; min-height: 0; }
+main.map-fullscreen .map-controls {
+  padding-left: max(12px, env(safe-area-inset-left));
+  padding-right: max(12px, env(safe-area-inset-right));
+  padding-bottom: max(10px, env(safe-area-inset-bottom));
+}
+main.map-fullscreen .sources, main.map-fullscreen .map-hint { display: none; }
+@media print {
+  main.map-fullscreen { position: static; display: block; height: auto; background: white; }
+  main.map-fullscreen .map-viewport { height: auto; }
+  main.map-fullscreen .sources { display: block; }
+}
+
+
+.atlas-dialog { width: min(680px, calc(100% - 24px)); max-height: 80dvh; padding: 18px; border: 1px solid #62538c; border-radius: 14px; background: #12101c; color: #f0eeff; }
+.atlas-dialog::backdrop { background: rgb(0 0 0 / .72); }
+.dialog-head { display:flex; justify-content:space-between; align-items:flex-start; gap:10px; margin-bottom:12px; }
+.dialog-head h2 { font-size:1.25rem; }
+.atlas-dialog button, .atlas-dialog input, .source-note-button { font:inherit; background:#221b34; color:#f2ecff; border:1px solid #5b4d77; border-radius:7px; padding:6px 9px; }
+.atlas-dialog button, .source-note-button { cursor:pointer; }
+.atlas-dialog input { display:block; width:100%; margin:6px 0 9px; }
+.atlas-results { margin:8px 0 0; padding:0; list-style:none; }
+.atlas-results button { width:100%; margin-bottom:6px; text-align:left; }
+.atlas-results small { display:block; color:#bdb3db; }
+.atlas-dialog a { color:#a7ecff; }
+.atlas-status { margin:8px 0; color:#cec7df; font-size:.84rem; }
+.atlas-note-text { white-space:pre-wrap; margin:12px 0; line-height:1.6; user-select:text; }
+.source-note-button { display:block; margin-top:8px; padding:2px 6px; font-size:.72rem; }
+@media print { .source-note-button, .atlas-dialog { display:none; } }
+
+
+.tree-box .diagnostic-clue { margin: 0 0 6px; }
+.diagnostic-result { color: var(--neon); }
+@media print { .diagnostic-result { color:#101020; } }
+
+.tree-box .numeric-cue {color:#fff; font-weight:750;}
+@media print { .tree-box .numeric-cue {color:#101020;} }
+</style>
+</head>
+<body>
+<main class="wrap"></main>
+<script>
+const raw = "# Hematology & Lymphatics\n> Adult anemia · hemoglobin <13 g/dL in men or <12 g/dL in nonpregnant women → MCV\n>> <80 fL MCV · Microcytic anemia\nFerritin <30 ng/mL supports depleted stores without inflammation · low iron, high TIBC | Iron deficiency anemia\nLow iron, low TIBC, normal or high ferritin | Anemia of inflammation\nHbA₂ typically ≥3.5% · very low MCV with relatively high RBC count | β-thalassemia trait\nMicrocytosis, relatively high RBC count, often normal hemoglobin analysis | α-thalassemia trait\n3 α-globin gene deletions · β₄ tetramers | HbH disease\n4 α-globin gene deletions · γ₄ tetramers, fetal hydrops | Hb Bart syndrome\nRing sideroblasts in marrow, increased iron stores | Sideroblastic anemia\nExposure history, abdominal pain, basophilic stippling | Lead poisoning\n>> 80–100 fL MCV · Normocytic anemia\nLow reticulocytes, chronic kidney disease, reduced erythropoietin | Anemia of chronic kidney disease\nPancytopenia, low reticulocytes, hypocellular marrow | Aplastic anemia\nIsolated severe anemia with very low reticulocytes and absent erythroid precursors | Pure red cell aplasia\nTeardrop cells with circulating nucleated RBCs and immature granulocytes | Marrow infiltration or fibrosis\n>> >100 fL MCV · Macrocytic anemia\nMethylmalonic acid and homocysteine both elevated · hypersegmented neutrophils, possible neurologic deficits | Vitamin B₁₂ deficiency\nHypersegmented neutrophils, normal methylmalonic acid, high homocysteine | Folate deficiency\nVitamin B₁₂ deficiency with intrinsic factor antibodies | Pernicious anemia\nPersistent cytopenia with dysplastic cells | Myelodysplastic syndrome\n> Hemolysis → smear and direct antiglobulin test (DAT)\nSpherocytes, negative DAT, family history or high MCHC | Hereditary spherocytosis\nSpherocytes, DAT positive for IgG with or without C3 | Warm autoimmune hemolytic anemia\nRBC agglutination, DAT predominantly positive for C3 | Cold agglutinin disease\nBite cells after oxidant exposure or infection | G6PD deficiency\nChronic nonspherocytic hemolysis, echinocytes | Pyruvate kinase deficiency\nSickled cells, vaso-occlusive pain, HbS with no HbA in untreated HbSS | Sickle cell anemia (HbSS)\nTarget cells and HbC crystals, predominant HbC with no HbA | Hemoglobin C disease\nHemoglobinuria, unusual-site thrombosis, loss of GPI-linked proteins by flow cytometry | Paroxysmal nocturnal hemoglobinuria\n> Bleeding → platelet count, smear, PT and aPTT\nType 1 VWF <0.30 IU/mL, or <0.50 IU/mL with abnormal bleeding · mucosal bleeding | von Willebrand disease\nLarge platelets, abnormal ristocetin response, deficient GPIb | Bernard–Soulier syndrome\nDeficient GPIIb/IIIa, impaired aggregation with preserved ristocetin response | Glanzmann thrombasthenia\nFactor VIII activity <1% in severe disease · hemarthroses, prolonged aPTT that corrects on mixing | Hemophilia A\nFactor IX activity <1% in severe disease · hemarthroses, prolonged aPTT that corrects on mixing | Hemophilia B\nDelayed bleeding, normal PT and aPTT, reduced factor XIII activity | Factor XIII deficiency\nNew spontaneous deep bleeding, isolated aPTT with time-dependent mixing failure | Acquired factor VIII inhibitor\n> Thrombocytopenia → hemolysis, clotting times, exposures\nPlatelets <100 × 10⁹/L, isolated · no schistocytes, no better cause | Immune thrombocytopenia\nADAMTS13 activity <10% · schistocytes, hemolysis, usually normal PT and aPTT | Thrombotic thrombocytopenic purpura\nSchistocytes, thrombocytopenia, acute kidney injury after bloody diarrhea | Shiga toxin–associated hemolytic uremic syndrome\nSchistocytes, falling fibrinogen, high D-dimer, prolonged PT and aPTT | Acute disseminated intravascular coagulation\n>50% platelet fall, typically 5–10 days after starting heparin · thrombosis may occur | Heparin-induced thrombocytopenia\nPregnancy or postpartum, hemolysis, high liver enzymes, low platelets | HELLP syndrome\n> Abnormal white cells or cytoses → smear, flow cytometry, genetics\n≥20% blasts for AML without defining genetics · myeloperoxidase or Auer rods support myeloid lineage | Acute myeloid leukemia\nt(15;17) → PML::RARA · abnormal promyelocytes, DIC | Acute promyelocytic leukemia\nTdT-positive lymphoblasts, often pediatric or with a mediastinal mass in T lineage | Acute lymphoblastic leukemia\n≥5 × 10⁹/L clonal B cells for ≥3 months · CD5 and CD23, smudge cells | Chronic lymphocytic leukemia\nBasophilia, left-shifted granulocytosis, BCR::ABL1 | Chronic myeloid leukemia\nSplenomegaly, pancytopenia, hairy B cells, BRAF V600E | Hairy cell leukemia\nHemoglobin >16.5 g/dL in men or >16.0 in women raises suspicion · JAK2, low erythropoietin | Polycythemia vera\nPlatelets ≥450 × 10⁹/L persistently · clonal megakaryocytes after excluding reactive causes | Essential thrombocythemia\nMassive spleen, teardrop RBCs, dry marrow aspirate | Primary myelofibrosis\n> Lymphadenopathy or monoclonal protein → morphology and markers\nReed–Sternberg cells, CD15 and CD30, orderly nodal spread | Classical Hodgkin lymphoma\nt(14;18) → BCL2 overexpression · follicular architecture | Follicular lymphoma\nt(11;14) → cyclin D1 overexpression · CD5-positive B cells | Mantle cell lymphoma\nRapidly enlarging mass, sheets of large atypical B cells | Diffuse large B-cell lymphoma\nMYC translocation, starry-sky pattern, rapid growth | Burkitt lymphoma\n≥10% clonal marrow plasma cells or plasmacytoma, plus ≥1 myeloma-defining event | Multiple myeloma\nIgM monoclonal protein, hyperviscosity, lymphoplasmacytic marrow | Waldenström macroglobulinemia\n# Cardiovascular\n> Chest pain → timing, ECG and troponin\nPredictable exertional pain relieved by rest | Stable angina\nNew or worsening ischemic pain, no acute troponin rise | Unstable angina\nNew ST elevation ≥1 mm in ≥2 contiguous leads outside V₂–V₃ · V₂–V₃: ≥2.5 mm men <40, ≥2 mm men ≥40, ≥1.5 mm women | STEMI\nAcute troponin rise with ischemia, no persistent ST elevation | NSTEMI\nRest pain, transient ST elevation during spasm | Vasospastic angina\nPleuritic and positional pain, diffuse ST elevation and PR depression | Acute pericarditis\nHypotension, elevated jugular venous pressure, chamber collapse on echo | Cardiac tamponade\nAbrupt severe pain, pulse differential or intimal flap on CTA | Aortic dissection\n> Murmur → timing, radiation and maneuvers\nPeak jet ≥4 m/s or mean gradient ≥40 mm Hg suggests high-gradient severe AS · carotid radiation | Aortic stenosis\nEarly diastolic decrescendo murmur, wide pulse pressure | Aortic regurgitation\nHolosystolic apex murmur radiates to axilla | Mitral regurgitation\nOpening snap, low-pitched apical diastolic rumble | Mitral stenosis\nMidsystolic click, earlier with standing | Mitral valve prolapse\nSystolic murmur increases with standing or Valsalva strain | Hypertrophic obstructive cardiomyopathy\nHolosystolic lower sternal murmur increases with inspiration | Tricuspid regurgitation\n> Congenital defect → cyanosis, auscultation and echo\nFixed split S₂ | Atrial septal defect\nHarsh holosystolic murmur at left lower sternal border | Ventricular septal defect\nContinuous machinery murmur with bounding pulses | Patent ductus arteriosus\nCyanotic spells improve with squatting, boot-shaped heart | Tetralogy of Fallot\nSevere neonatal cyanosis, parallel circulations | D-transposition of the great arteries\nArm pressure exceeds leg pressure, delayed femoral pulses | Coarctation of the aorta\nChronic left-to-right shunt reverses after pulmonary hypertension | Eisenmenger syndrome\n> Heart failure or systemic hypoperfusion → ventricular findings\nDilated ventricles, reduced systolic function | Dilated cardiomyopathy\nLV wall ≥15 mm in adults, unexplained by loading · asymmetric septal hypertrophy, myofiber disarray | Hypertrophic cardiomyopathy\nImpaired ventricular filling, relatively preserved systolic function, infiltrative disease | Restrictive cardiomyopathy\nSeptal bounce, exaggerated respiratory ventricular interdependence | Constrictive pericarditis\nTransient apical ballooning after stress, no culprit coronary obstruction | Takotsubo cardiomyopathy\n> Fever or inflammation → cardiac exam and tissue\nPositive blood cultures plus valvular vegetation | Infective endocarditis\n2 major or 1 major + 2 minor Jones findings for a typical first episode · evidence of recent group A strep | Acute rheumatic fever\nClassic pattern: ≥5 days of fever + ≥4 of 5 mucocutaneous or nodal features · coronary aneurysm risk | Kawasaki disease\n# Respiratory\n> Spirometry and lung volumes\n>> Low FEV₁/FVC (first-second forced expiratory volume ÷ forced vital capacity) · Obstructive pattern\nFEV₁ or FVC rise ≥12% and ≥200 mL after bronchodilator supports asthma in adults · variable symptoms | Asthma\nPostbronchodilator FEV₁/FVC <0.70 with compatible exposure and symptoms | COPD\n≥3 months of productive cough per year for ≥2 consecutive years · exclude other causes | Chronic bronchitis\nHyperinflation, reduced DLCO, distal airspace destruction | Emphysema\nRecurrent purulent sputum, dilated airways and signet-ring sign on CT | Bronchiectasis\nSweat chloride ≥60 mmol/L in compatible context · sinopulmonary disease, pancreatic insufficiency | Cystic fibrosis\nChronic sinopulmonary disease, infertility, sometimes situs inversus | Primary ciliary dyskinesia\n>> Low TLC (total lung capacity), normal or high FEV₁/FVC · Restrictive pattern\nBasal subpleural honeycombing and traction bronchiectasis, UIP pattern | Idiopathic pulmonary fibrosis\nBilateral hilar adenopathy, noncaseating granulomas | Sarcoidosis\nAntigen exposure with mosaic attenuation and centrilobular nodules | Hypersensitivity pneumonitis\nUpper-lobe nodules, eggshell nodal calcification, silica exposure | Silicosis\nPleural plaques, lower-lobe fibrosis, ferruginous bodies | Asbestosis\nCoal exposure, upper-lobe nodules with carbon-laden macrophages | Coal workers’ pneumoconiosis\n> Acute dyspnea → imaging, pleural and vascular findings\nAbrupt pleuritic pain or dyspnea, arterial filling defect on CTA | Pulmonary embolism\nPleural line with absent peripheral lung markings | Pneumothorax\nUnilateral absent breath sounds and obstructive shock | Tension pneumothorax\nPaO₂/FiO₂ ≤300 with PEEP or CPAP ≥5 cm H₂O in the Berlin definition · bilateral noncardiogenic opacities | Acute respiratory distress syndrome\nPurulent pleural fluid or positive pleural Gram stain/culture | Empyema\n> Lung mass → location, histology and paraneoplastic clues\nPeripheral gland-forming or mucin-producing tumor, TTF-1 often positive | Lung adenocarcinoma\nCentral tumor with keratin pearls, PTHrP-associated hypercalcemia | Squamous cell lung carcinoma\nCentral tumor with nuclear molding and neuroendocrine markers, SIADH or ectopic ACTH | Small cell lung carcinoma\nPleural rind after asbestos exposure, calretinin or WT1 positivity | Malignant mesothelioma\n# Renal\n> Glomerular injury → urine sediment and protein excretion\n>> Hematuria, dysmorphic RBCs or RBC casts · Nephritic pattern\n1–3 weeks after pharyngitis, low C3, subepithelial humps | Poststreptococcal glomerulonephritis\nHematuria during or shortly after upper respiratory infection, mesangial IgA | IgA nephropathy\nPalpable purpura, abdominal pain, arthralgia, renal IgA | IgA vasculitis\nHemoptysis and rapidly progressive kidney injury, linear GBM IgG | Anti-GBM disease\nHearing loss, ocular findings, split GBM on electron microscopy | Alport syndrome\nFull-house immunofluorescence, anti-dsDNA, low complement | Lupus nephritis\n>> >3.5 g/day urine protein in adults · Nephrotic pattern with edema and hypoalbuminemia\nChild, normal light microscopy, diffuse podocyte foot-process effacement | Minimal change disease\nSegmental sclerosis in some glomeruli, HIV or APOL1 association | Focal segmental glomerulosclerosis\nSubepithelial deposits, spike-and-dome pattern, anti-PLA2R in many primary cases | Membranous nephropathy\nNodular glomerulosclerosis with longstanding diabetes | Diabetic nephropathy\nCongo-red–positive deposits with apple-green birefringence | Renal amyloidosis\n> Normal-anion-gap metabolic acidosis → potassium and urine pH\nUrine pH >5.5 during systemic acidosis · hypokalemia, calcium phosphate stones | Distal (type 1) renal tubular acidosis\nUrine pH <5.5 once bicarbonate falls below its reabsorption threshold · bicarbonate wasting, hypokalemia | Proximal (type 2) renal tubular acidosis\nHyperkalemia and low aldosterone activity | Type 4 renal tubular acidosis\nProximal loss of glucose despite normal serum glucose, phosphate, and bicarbonate | Fanconi syndrome\n> Creatinine ↑ ≥0.3 mg/dL in 48 h or ≥1.5× baseline in 7 days, or urine <0.5 mL/kg/h for ≥6 h · AKI\nMuddy brown granular casts after ischemia or nephrotoxin exposure | Acute tubular injury\nRecent drug exposure with sterile pyuria or WBC casts | Acute interstitial nephritis\nHydronephrosis or bladder distention with obstructive symptoms | Postrenal acute kidney injury\nFever, flank pain, pyuria with WBC casts | Acute pyelonephritis\n> Stones or renal mass → crystal shape and imaging\nEnvelope or dumbbell crystals, usually radiopaque | Calcium oxalate stones\nCoffin-lid crystals, alkaline urine, urease-positive infection, staghorn calculus | Struvite stones\nRadiolucent on plain film, acidic urine, rhomboid crystals | Uric acid stones\nHexagonal crystals, recurrent stones at a young age | Cystinuria\nEnhancing renal cortical mass, clear cells, VHL association | Clear cell renal cell carcinoma\nChild with large abdominal mass and triphasic histology | Wilms tumor\nBilateral renal cysts, family history, intracranial aneurysm association | Autosomal dominant polycystic kidney disease\n# Endocrine\n> Thyroid symptoms → TSH and free T₄\nHigh TSH, low free T₄, anti-TPO antibodies, lymphocytic thyroiditis | Hashimoto thyroiditis\nLow TSH, elevated free T₄ or T₃, diffuse uptake, TSH-receptor antibodies | Graves disease\nLow TSH, elevated thyroid hormones, focal hot nodule | Toxic adenoma\nPainful thyroid after viral illness, low uptake, high ESR | Subacute granulomatous thyroiditis\nLow or inappropriately normal TSH with low free T₄ | Central hypothyroidism\n> Thyroid nodule → histology\nNuclear clearing, grooves and inclusions, psammoma bodies | Papillary thyroid carcinoma\nCapsular or vascular invasion of a follicular neoplasm | Follicular thyroid carcinoma\nCalcitonin, amyloid stroma, RET association | Medullary thyroid carcinoma\nRapidly enlarging invasive neck mass with undifferentiated cells | Anaplastic thyroid carcinoma\n> Hypercalcemia → PTH and urine calcium\nHigh or inappropriately normal PTH, urine calcium usually normal or high | Primary hyperparathyroidism\nCalcium-to-creatinine clearance ratio <0.01 favors FHH · mild hypercalcemia, family history | Familial hypocalciuric hypercalcemia\nLow PTH, elevated PTHrP, cancer context | Humoral hypercalcemia of malignancy\n> Abnormal blood pressure → cortisol, ACTH, renin and aldosterone\nLow cortisol, high ACTH, hyperpigmentation, often hyperkalemia | Primary adrenal insufficiency\nLow cortisol with low or inappropriately normal ACTH, aldosterone usually preserved | Central adrenal insufficiency\nHypertension, low renin, high aldosterone, possible hypokalemia | Primary aldosteronism\nEpisodic headache, sweating, palpitations, elevated metanephrines | Pheochromocytoma\nCortisol >1.8 µg/dL after 1 mg dexamethasone suggests failed suppression · proximal weakness, wide violaceous striae | Cushing syndrome\n> Hyperglycemia or polyuria → ketones, acid-base status and osmolality\nGlucose ≥200 mg/dL or known diabetes · β-hydroxybutyrate ≥3 mmol/L · pH <7.30 or HCO₃⁻ <18 mmol/L | Diabetic ketoacidosis\nGlucose ≥600 mg/dL · effective osmolality >300 or total >320 mOsm/kg · β-hydroxybutyrate <3 mmol/L, pH ≥7.30, HCO₃⁻ ≥15 mmol/L | Hyperosmolar hyperglycemic state\nDilute urine concentrates after desmopressin | Central diabetes insipidus\nDilute urine shows little concentration response to desmopressin | Nephrogenic diabetes insipidus\n> Pituitary or adrenal findings → hormone pattern\nGalactorrhea or hypogonadism with elevated prolactin | Prolactinoma\nIGF-1 >1.3× age-adjusted upper limit with typical phenotype · GH fails to suppress after oral glucose | Acromegaly\nPostpartum hemorrhage followed by failure to lactate and hypopituitarism | Sheehan syndrome\nElevated 17-hydroxyprogesterone, androgen excess, possible salt wasting | 21-hydroxylase deficiency\nAndrogen excess with hypertension from elevated deoxycorticosterone | 11β-hydroxylase deficiency\nHypertension, hypokalemia, low sex steroids | 17α-hydroxylase deficiency\n# Gastrointestinal\n> Dysphagia or upper abdominal pain → endoscopy and motility\nDysphagia to solids and liquids, bird-beak narrowing, impaired LES relaxation | Achalasia\n≥15 eosinophils per high-power field on esophageal biopsy · dysphagia, rings or furrows | Eosinophilic esophagitis\nDistal esophageal intestinal metaplasia with goblet cells | Barrett esophagus\nAge 3–6 weeks typical · projectile nonbilious vomiting, pyloric thickening, hypochloremic alkalosis | Hypertrophic pyloric stenosis\nGastric biopsy with curved urease-positive organisms | Helicobacter pylori gastritis\nRefractory or multiple ulcers with high gastrin and gastric acid secretion | Zollinger–Ellison syndrome\n> Diarrhea, bleeding or malabsorption → distribution and histology\nSkip lesions, transmural inflammation, fistulas | Crohn disease\nContinuous rectal-to-proximal colitis, mucosal inflammation, crypt abscesses | Ulcerative colitis\nChronic watery diarrhea, often normal colonoscopy, abnormal mucosal biopsy | Microscopic colitis\nIgA anti-tTG with villous atrophy and crypt hyperplasia | Celiac disease\nPAS-positive foamy macrophages, malabsorption with arthralgia | Whipple disease\nPainless lower GI bleeding in a child, ectopic gastric mucosa | Meckel diverticulum\n> Jaundice → bilirubin fraction and cholestatic pattern\nMild unconjugated bilirubin rise with fasting or illness | Gilbert syndrome\nMarked unconjugated bilirubin from severe UGT1A1 deficiency | Crigler–Najjar syndrome\nConjugated hyperbilirubinemia and darkly pigmented liver | Dubin–Johnson syndrome\nConjugated hyperbilirubinemia without dark liver pigmentation | Rotor syndrome\nCholestatic enzymes, antimitochondrial antibodies, small intrahepatic duct injury | Primary biliary cholangitis\nMultifocal biliary strictures and beading, ulcerative colitis association | Primary sclerosing cholangitis\n> Abdominal pain → location, enzymes and imaging\n2 of 3: typical pain, lipase or amylase ≥3× upper limit, or characteristic imaging | Acute pancreatitis\nCalcifications, chronic pain, pancreatic exocrine insufficiency | Chronic pancreatitis\nPostprandial episodic right upper quadrant pain without systemic inflammation | Biliary colic\nPersistent right upper quadrant pain, Murphy sign, gallbladder wall thickening | Acute cholecystitis\nFever, jaundice, right upper quadrant pain with biliary obstruction | Acute cholangitis\nMigrating periumbilical-to-right-lower-quadrant pain and appendiceal inflammation | Acute appendicitis\nPain out of proportion to abdominal exam, vascular risk | Acute mesenteric ischemia\n> Liver or pancreatic lesion → exposures, labs and imaging\nKayser–Fleischer rings, low ceruloplasmin, high urinary copper | Wilson disease\nTransferrin saturation >45% prompts evaluation · iron overload, HFE association | Hereditary hemochromatosis\nPAS-positive diastase-resistant hepatic globules, early panacinar emphysema | α₁-antitrypsin deficiency\nArterial enhancement and washout in at-risk liver | Hepatocellular carcinoma\nPainless obstructive jaundice, pancreatic head mass, ductal dilation | Pancreatic ductal adenocarcinoma\n# Neurology & Special Senses\n> Headache or abrupt deficit → timing, associated findings and imaging\n30 min–7 days in episodic form · bilateral bandlike pressure, no nausea or vomiting | Tension-type headache\n4–72 hours in adults untreated · pulsatile pain, nausea or light and sound sensitivity, possible aura | Migraine\n15–180 min untreated · severe unilateral orbital pain with ipsilateral lacrimation or rhinorrhea | Cluster headache\nFraction of a second to 2 min · triggered electric shock-like facial pain | Trigeminal neuralgia\nThunderclap headache, subarachnoid blood or CSF xanthochromia | Subarachnoid hemorrhage\nTrauma, lucid interval, biconvex extra-axial blood | Epidural hematoma\nCrescentic extra-axial blood after bridging vein injury | Subdural hematoma\n> Weakness or demyelination → reflexes, distribution and testing\nAscending weakness, areflexia, high CSF protein with few cells | Guillain–Barré syndrome\nFatigable ocular or bulbar weakness, AChR or MuSK antibodies | Myasthenia gravis\nProximal weakness improves with repeated use, presynaptic calcium-channel antibodies | Lambert–Eaton syndrome\nUpper and lower motor neuron findings with preserved sensation | Amyotrophic lateral sclerosis\nNeurologic lesions separated in time and space, periventricular plaques | Multiple sclerosis\nMyelitis over ≥3 contiguous vertebral segments or severe optic neuritis · AQP4-IgG | Neuromyelitis optica spectrum disorder\n> Movement, cognition or gait → exam and pathology\nBradykinesia with resting tremor or rigidity, α-synuclein Lewy bodies | Parkinson disease\nChorea, psychiatric symptoms, caudate atrophy, HTT CAG expansion | Huntington disease\nProgressive episodic memory loss, amyloid plaques and tau tangles | Alzheimer disease\nCognitive fluctuations, visual hallucinations and parkinsonism | Dementia with Lewy bodies\nEarly behavioral or language changes with frontal or temporal atrophy | Frontotemporal dementia\nGait impairment, urinary symptoms, cognitive decline, ventriculomegaly | Normal pressure hydrocephalus\n> CNS mass or eye finding → imaging and histology\nNecrosis with pseudopalisading and microvascular proliferation | Glioblastoma\nDural-based extra-axial mass, whorls and psammoma bodies | Meningioma\nInternal auditory canal mass, unilateral sensorineural hearing loss | Vestibular schwannoma\nChild with midline cerebellar tumor, small blue cells, possible drop metastases | Medulloblastoma\nPainful red eye, halos, mid-dilated pupil, high intraocular pressure | Acute angle-closure glaucoma\nPainless monocular vision loss, pale retina, cherry-red spot | Central retinal artery occlusion\nPainless vision loss, diffuse retinal hemorrhages and venous engorgement | Central retinal vein occlusion\nFlashes, floaters, curtainlike visual field loss | Retinal detachment\n# Musculoskeletal, Skin & Connective Tissue\n> Joint pain → distribution, stiffness, fluid and antibodies\nPain worse with use, osteophytes and asymmetric joint-space loss | Osteoarthritis\nMorning stiffness often >60 min · symmetric MCP/PIP synovitis, anti-CCP | Rheumatoid arthritis\nAcute monoarthritis, needle-shaped negatively birefringent crystals | Gout\nRhomboid weakly positively birefringent crystals, chondrocalcinosis | Calcium pyrophosphate deposition disease\nAcute hot joint, purulent fluid or positive synovial culture | Septic arthritis\nInflammatory back pain improves with activity, sacroiliitis | Ankylosing spondylitis\nDactylitis, nail pitting and psoriasis | Psoriatic arthritis\nAsymmetric arthritis after GI or GU infection, possible conjunctivitis | Reactive arthritis\n> Bone pain or fracture → location, imaging and labs\nDXA T-score ≤−2.5 in postmenopausal women and men ≥50 · usually normal calcium and phosphate | Osteoporosis\nDefective mineralization, bone pain, possible Looser zones | Osteomalacia\nChild with widened, cupped and frayed growth plates | Rickets\nHigh alkaline phosphatase with normal calcium and phosphate, mosaic lamellar bone | Paget disease of bone\nMetaphyseal aggressive lesion, sunburst or Codman triangle, malignant osteoid | Osteosarcoma\nDiaphyseal lesion with onion-skin reaction, small round cells, EWSR1 fusion | Ewing sarcoma\nEpiphyseal lytic soap-bubble lesion, osteoclast-type giant cells | Giant cell tumor of bone\nNight pain relieved by NSAIDs, small radiolucent nidus | Osteoid osteoma\n> Rash, blister or nodule → morphology and biopsy\nFlaccid bullae, oral erosions, intercellular IgG, suprabasal acantholysis | Pemphigus vulgaris\nTense pruritic bullae, linear IgG/C3 at basement membrane | Bullous pemphigoid\nPruritic grouped extensor vesicles, granular IgA in dermal papillae | Dermatitis herpetiformis\nExtensor plaques with silvery scale, nail pitting | Psoriasis\nPruritic purple polygonal papules, Wickham striae | Lichen planus\nPearly papule with telangiectasia, peripheral palisading | Basal cell carcinoma\nKeratin pearls and intercellular bridges in atypical squamous cells | Cutaneous squamous cell carcinoma\nAsymmetric pigmented lesion with irregular borders and atypical melanocytes | Melanoma\n> Multisystem connective tissue disease → exam and antibodies\nMalar rash, nephritis or cytopenias with anti-dsDNA or anti-Smith | Systemic lupus erythematosus\nDry eyes and mouth, anti-SSA/SSB, focal lymphocytic salivary inflammation | Sjögren syndrome\nRaynaud phenomenon, sclerodactyly, telangiectasias, anticentromere | Limited cutaneous systemic sclerosis\nProximal skin thickening, interstitial lung disease, anti-topoisomerase I | Diffuse cutaneous systemic sclerosis\nProximal weakness, heliotrope rash or Gottron papules, perifascicular atrophy | Dermatomyositis\n> Proximal weakness or inherited tissue fragility → phenotype\nChildhood proximal weakness, Gowers sign, calf pseudohypertrophy, absent dystrophin | Duchenne muscular dystrophy\nLater-onset dystrophinopathy with partially functional dystrophin | Becker muscular dystrophy\nFractures with blue sclerae and hearing loss, type I collagen defect | Osteogenesis imperfecta\nHyperextensible skin, hypermobile joints, easy bruising | Ehlers–Danlos syndrome\nTall habitus, superotemporal lens displacement, aortic root dilation | Marfan syndrome\n# Reproductive\n> Pregnancy bleeding → gestational timing, pain and ultrasound\nFirst-trimester pain or bleeding, extrauterine gestational findings | Ectopic pregnancy\nVery high hCG, diffuse cystic intrauterine tissue, no fetus in complete form | Complete hydatidiform mole\nPainless late-pregnancy bleeding with placenta over or near the cervical os | Placenta previa\nPainful late-pregnancy bleeding with uterine tenderness | Placental abruption\nPost-delivery hemorrhage with a soft boggy uterus | Uterine atony\nNew BP ≥140 systolic or ≥90 diastolic mm Hg at ≥20 weeks · proteinuria or qualifying organ dysfunction | Preeclampsia\nNew seizures with preeclampsia | Eclampsia\n> Pelvic pain, irregular cycles or infertility → timing and pelvic findings\nCyclic pelvic pain, deep dyspareunia, endometrial glands and stroma outside uterus | Endometriosis\nHeavy painful menses, boggy enlarged uterus, endometrial tissue in myometrium | Adenomyosis\nFirm irregular enlarged uterus, well-circumscribed whorled masses | Uterine leiomyoma\nAdults: 2 of 3 after excluding mimics · hyperandrogenism, ovulatory dysfunction, polycystic ovarian morphology | Polycystic ovary syndrome\nAdnexal pain with cervical motion tenderness and infection risk | Pelvic inflammatory disease\nSudden unilateral pelvic pain with enlarged ovary or twisted pedicle | Ovarian torsion\n> Reproductive mass → age, markers and histology\nPapillary architecture and possible psammoma bodies | Serous ovarian carcinoma\nSchiller–Duval bodies, elevated AFP | Yolk sac tumor\nEstrogen excess, Call–Exner bodies, elevated inhibin | Granulosa cell tumor\nOvarian germ cell tumor with teeth, hair or sebaceous material | Mature cystic teratoma\nPainless testicular mass, clear cells with lymphocytic septa | Seminoma\nHemorrhagic testicular tumor, very high β-hCG, trophoblastic cells without villi | Choriocarcinoma\nPeripheral prostatic lesion, small infiltrative glands without basal layer | Prostatic adenocarcinoma\nPeriurethral transition-zone enlargement and obstructive symptoms | Benign prostatic hyperplasia\n> Breast or cervical lesion → exam and histology\nMobile circumscribed breast mass with biphasic stromal and epithelial proliferation | Fibroadenoma\nBloody nipple discharge, lesion within a duct | Intraductal papilloma\nMalignant ductal cells confined by basement membrane | Ductal carcinoma in situ\nSingle-file invasive cells with loss of E-cadherin | Invasive lobular carcinoma\nBloody postcoital discharge, invasive cervical lesion, high-risk HPV | Cervical carcinoma\n# Psychiatry\n> Mood symptoms → time course and history of elevated mood\n≥5 symptoms for ≥2 weeks · depressed mood or anhedonia, no mania or hypomania | Major depressive disorder\nDepressive episode with mood-congruent or incongruent psychosis confined to mood episodes | Major depression with psychotic features\n≥1 manic episode, generally ≥7 days or any duration if hospitalization required | Bipolar I disorder\n≥4 consecutive days of hypomania + major depressive episode · no mania | Bipolar II disorder\n≥2 years of chronic depressed mood in adults · ≥1 year in children or adolescents | Persistent depressive disorder\n> Anxiety or trauma → trigger and duration\n≥1 month of concern or maladaptive behavior after recurrent unexpected panic attacks | Panic disorder\n≥6 months of excessive, hard-to-control worry across domains | Generalized anxiety disorder\nFear of scrutiny in social situations | Social anxiety disorder\n>1 month after trauma · intrusions, avoidance, negative mood or cognition, heightened arousal | Post-traumatic stress disorder\n3 days–1 month after trauma · intrusion, negative mood, dissociation, avoidance or arousal | Acute stress disorder\nIntrusive obsessions or repetitive compulsions that cause distress or impairment | Obsessive-compulsive disorder\n> Psychosis or inattention → duration, mood relationship and context\nPsychosis ≥1 day but <1 month, full return to baseline | Brief psychotic disorder\nSchizophrenia-like symptoms ≥1 month but <6 months | Schizophreniform disorder\nContinuous signs ≥6 months, including active symptoms and functional decline | Schizophrenia\n≥2 weeks of psychosis without a major mood episode · mood episodes occupy most of the illness | Schizoaffective disorder\nAcute fluctuating inattention and altered awareness | Delirium\n> Eating or body image symptoms → weight and behaviors\nRestriction with significantly low body weight and fear of weight gain | Anorexia nervosa\n≥1 binge with compensatory behavior per week for ≥3 months on average | Bulimia nervosa\n≥1 binge per week for ≥3 months on average · no regular compensatory behaviors | Binge-eating disorder\n# Immune & Multisystem Disorders\n> Recurrent infections → cell counts, immunoglobulins and oxidative burst\nBoy with recurrent bacterial infections after maternal IgG wanes, very low B cells and immunoglobulins | X-linked agammaglobulinemia\nLow IgG plus low IgA and/or IgM, poor vaccine response | Common variable immunodeficiency\nLow IgA with normal IgG and IgM | Selective IgA deficiency\nRecurrent catalase-positive infections, abnormal dihydrorhodamine test | Chronic granulomatous disease\nDelayed umbilical separation, absent pus, neutrophilia | Leukocyte adhesion deficiency\nRecurrent infections with partial albinism and giant granules | Chediak–Higashi syndrome\nEczema, recurrent infections, small platelets | Wiskott–Aldrich syndrome\nHypocalcemia, conotruncal defect, thymic hypoplasia | 22q11.2 deletion syndrome\nSevere early infections with marked T-cell dysfunction, often impaired B-cell function | Severe combined immunodeficiency\nRecurrent invasive Neisseria infection, defective terminal complement | Terminal complement deficiency\n> Vasculitis → vessel distribution, antibodies and tissue\nENT disease, lung nodules or hemorrhage, glomerulonephritis, PR3-ANCA | Granulomatosis with polyangiitis\nPulmonary-renal syndrome, often MPO-ANCA, no granulomatous ENT pattern | Microscopic polyangiitis\nAsthma, eosinophilia, neuropathy, eosinophil-rich vasculitis | Eosinophilic granulomatosis with polyangiitis\nMedium-artery vasculitis, mesenteric or renal ischemia, usually spares lungs | Polyarteritis nodosa\nAge ≥50 · new headache, jaw claudication, visual symptoms | Giant cell arteritis\nYoung patient with unequal pulses and aortic branch disease | Takayasu arteritis\nRecurrent oral and genital ulcers with uveitis | Behçet disease\n> Inherited metabolic disease → biochemical or tissue signature\nHyperammonemia with elevated orotic acid | Ornithine transcarbamylase deficiency\nOrotic aciduria, megaloblastic anemia, normal ammonia | UMP synthase deficiency\nHyperuricemia, dystonia, self-injury, HGPRT deficiency | Lesch–Nyhan syndrome\nMusty odor and elevated phenylalanine | Phenylketonuria\nMaple-syrup odor, elevated branched-chain amino acids and alloisoleucine | Maple syrup urine disease\nInfantile cataracts, jaundice, E. coli sepsis after milk exposure | Classic galactosemia\nFasting hypoglycemia, hepatomegaly, lactic acidosis | Von Gierke disease\nInfantile cardiomyopathy, hypotonia, lysosomal acid α-glucosidase deficiency | Pompe disease\nExercise cramps, myoglobinuria, absent lactate rise on exercise | McArdle disease\nCherry-red macula, neurodegeneration, no hepatosplenomegaly | Tay–Sachs disease\nCherry-red macula with hepatosplenomegaly, sphingomyelinase deficiency | Niemann–Pick disease type A\nHepatosplenomegaly, bone pain, macrophages with wrinkled cytoplasm | Gaucher disease\nAngiokeratomas, neuropathic pain, renal and cardiac disease | Fabry disease\n# Infectious Diseases\n> Pneumonia or chronic pulmonary infection → host, imaging and microbiology\nLobar consolidation, lancet-shaped gram-positive diplococci, optochin sensitivity | Pneumococcal pneumonia\nDry cough, atypical infiltrates, cold agglutinins, organism lacks cell wall | Mycoplasma pneumonia\nPneumonia with diarrhea and hyponatremia, water exposure, positive urinary antigen | Legionnaires disease\nCavitation at lung apex or caseating granulomas, acid-fast bacilli | Pulmonary tuberculosis\nCD4 usually <200 cells/µL in HIV · diffuse ground-glass opacities | Pneumocystis pneumonia\nBird or bat exposure, small intracellular yeasts in macrophages | Histoplasmosis\nSouthwestern desert exposure, spherules containing endospores | Coccidioidomycosis\nBroad-based budding yeast, pulmonary and possible skin lesions | Blastomycosis\nNeutropenia, angioinvasion, septate acute-angle branching hyphae | Invasive aspergillosis\nKetoacidosis, necrotic sinonasal tissue, broad pauciseptate hyphae | Rhino-orbital mucormycosis\n> Diarrhea or abdominal infection → exposure, stool pattern and testing\nBloody diarrhea after undercooked beef, Shiga toxin, HUS risk | Shiga toxin–producing E. coli infection\nInflammatory diarrhea after poultry exposure, curved motile rods | Campylobacter enteritis\nBloody diarrhea with fever and tenesmus, low infectious dose | Shigellosis\nWatery diarrhea after antibiotics, stool toxin, possible pseudomembranes | Clostridioides difficile infection\nGreasy malabsorptive stool after untreated water exposure | Giardiasis\nBloody diarrhea or liver abscess, trophozoites with ingested RBCs | Amebiasis\nProfuse watery rice-water stools, curved oxidase-positive organism | Cholera\n> Fever with rash or systemic findings → exposure and targeted tests\nFever, cough, coryza, conjunctivitis, Koplik spots before rash | Measles\nMild rash, posterior auricular or suboccipital lymphadenopathy | Rubella\nSlapped-cheek rash, reticulocytopenia in aplastic crisis | Parvovirus B19 infection\n3–5 days of high fever, then truncal rash as fever resolves | Roseola\nSandpaper rash, strawberry tongue, group A streptococcal pharyngitis | Scarlet fever\nRash often 2–4 days after fever starts · may reach palms and soles, tick exposure | Rocky Mountain spotted fever\nExpanding erythema migrans, possible facial palsy or AV block | Lyme disease\nPainless chancre, or later palm and sole rash | Syphilis\nPosterior cervical lymphadenopathy, atypical lymphocytes, heterophile antibodies | EBV infectious mononucleosis\nMononucleosis-like illness with negative heterophile test | CMV mononucleosis\n> Meningitis, encephalitis or focal CNS lesions → CSF and imaging\nPetechiae or purpura with meningitis, gram-negative diplococci | Meningococcal disease\nNeonate, older adult or pregnancy, tumbling gram-positive rods | Listeriosis\nTemporal lobe abnormalities, encephalitis, positive HSV PCR | HSV encephalitis\nCD4 often <100 cells/µL in HIV · high CSF opening pressure, cryptococcal antigen | Cryptococcal meningitis\nCD4 often <100 cells/µL in HIV · multiple ring-enhancing brain lesions | Cerebral toxoplasmosis\n> Travel or parasite exposure → blood film and organ findings\nIntraerythrocytic ring forms and crescent-shaped gametocytes | Plasmodium falciparum malaria\nTick exposure, hemolysis, Maltese-cross tetrads | Babesiosis\nPeriorbital edema and myalgia after undercooked pork or wild game | Trichinellosis\nSeizures with cysts or calcified lesions in brain | Neurocysticercosis\nFreshwater exposure, terminal-spined ova in urine, hematuria | Schistosoma haematobium infection\nFreshwater exposure, lateral-spined ova and periportal fibrosis | Schistosoma mansoni infection\n# Hematology & Lymphatics\n> Childhood anemia or atypical infiltrates → marrow and tissue\nInfant with isolated red cell aplasia, macrocytosis, possible thumb anomalies | Diamond–Blackfan anemia\nPancytopenia with congenital anomalies and excess chromosomal breakage | Fanconi anemia\nCD1a and langerin-positive cells, grooved nuclei, Birbeck granules | Langerhans cell histiocytosis\nHTLV-1, hypercalcemia, flower cells | Adult T-cell leukemia/lymphoma\nCerebriform lymphocytes and cutaneous plaques, erythroderma in leukemic form | Cutaneous T-cell lymphoma\nClonal gastric B cells with lymphoepithelial lesions, chronic H. pylori gastritis | Gastric extranodal marginal zone lymphoma\n# Renal\n> Hematuria and proteinuria · Mixed glomerular pattern\nMesangial and endocapillary proliferation with GBM double contours | Membranoproliferative glomerulonephritis pattern\nRapid loss of filtration, crescents, necrosis, pauci-immune staining | ANCA-associated crescentic glomerulonephritis\n> Blood pressure, potassium and acid-base status → renal salt handling\nHypokalemic metabolic alkalosis, high urine calcium, normal or low BP | Bartter syndrome\nHypokalemic metabolic alkalosis, low urine calcium and low magnesium | Gitelman syndrome\nHypertension, hypokalemic alkalosis, low renin and low aldosterone | Liddle syndrome\n# Respiratory\n> Restrictive lung disease → exposure and radiographic pattern\nDry cough and dyspnea after thoracic radiation, changes within treated field | Radiation pneumonitis\nSmoker with upper-lobe nodules and irregular cysts | Pulmonary Langerhans cell histiocytosis\nSubacute dyspnea with peripheral or patchy consolidations, intra-alveolar fibroblastic plugs | Organizing pneumonia\n> Wheeze or stridor in children → sound and imaging\nBarking cough, inspiratory stridor, subglottic narrowing | Croup\nDrooling, tripod posture, thumbprint sign | Acute epiglottitis\nInfant with wheeze after viral upper respiratory symptoms, often RSV | Bronchiolitis\nPrematurity, diffuse reticulogranular opacities and air bronchograms | Neonatal respiratory distress syndrome\n# Gastrointestinal\n> Congenital GI obstruction → emesis, imaging and biopsy\nBilious emesis soon after birth, double-bubble sign and no distal gas | Duodenal atresia\nNo meconium by 48 hours in a term infant · transition zone, absent enteric ganglion cells | Hirschsprung disease\nIntermittent severe pain, target sign on ultrasound | Intussusception\nMidgut twisting with bilious emesis and mesenteric whirlpool sign | Midgut volvulus\n> Colorectal polyposis or characteristic tumor → genetics and histology\nHundreds of colorectal adenomas, germline APC variant | Familial adenomatous polyposis\nEarly colorectal or endometrial cancer, mismatch-repair deficiency | Lynch syndrome\nHamartomatous polyps and mucocutaneous pigmentation, STK11 | Peutz–Jeghers syndrome\nGastric signet-ring cells with diffuse thickening and rigidity | Diffuse gastric adenocarcinoma\n# Endocrine\n> Endocrine tumor combinations → affected glands\nParathyroid, pituitary and pancreatic neuroendocrine tumors | MEN type 1\nMedullary thyroid carcinoma, pheochromocytoma and hyperparathyroidism | MEN type 2A\nMedullary thyroid carcinoma, pheochromocytoma, mucosal neuromas | MEN type 2B\n# Neurology & Special Senses\n> Pediatric neurologic or neurocutaneous findings → phenotype and imaging\nFacial port-wine stain and leptomeningeal vascular malformation | Sturge–Weber syndrome\n≥6 café-au-lait macules >5 mm before puberty or >15 mm after · look for a second NF1 criterion | Neurofibromatosis type 1\nBilateral vestibular schwannomas | NF2-related schwannomatosis\nCortical tubers, seizures, facial angiofibromas and renal angiomyolipomas | Tuberous sclerosis complex\nRetinal or CNS hemangioblastomas, clear cell renal carcinoma | Von Hippel–Lindau disease\nLoss of acquired language and hand skills, repetitive hand movements, MECP2 | Rett syndrome\nTypical onset age 10–15 years · ataxia, areflexia, hypertrophic cardiomyopathy, FXN GAA expansion | Friedreich ataxia\n# Cardiovascular\n> ECG rhythm → rate, regularity and atrioventricular conduction\nIrregularly irregular rhythm without discrete P waves | Atrial fibrillation\nAtrial rate often ~300/min, ventricular rate ~150/min with 2:1 conduction · sawtooth waves | Atrial flutter\nAbrupt regular narrow-complex tachycardia, P waves often hidden | AV nodal reentrant tachycardia\nPR <120 ms · delta wave, widened QRS | Wolff–Parkinson–White pattern\nProgressively longer PR until a QRS drops | Mobitz I AV block\nFixed PR intervals with intermittent nonconducted P waves | Mobitz II AV block\nIndependent atrial and ventricular rates | Complete heart block\nPolymorphic ventricular tachycardia twisting around baseline with prolonged QT | Torsades de pointes";
+
+const systems=new Map();
+let system,group,parent;
+for(const line of raw.trim().split('\n')){
+ if(line.startsWith('# ')){
+   const name=line.slice(2);
+   if(!systems.has(name))systems.set(name,{text:name,children:[]});
+   system=systems.get(name);
+ } else if(line.startsWith('>> ')){
+   parent={text:line.slice(3),children:[]};group.children.push(parent);
+ } else if(line.startsWith('> ')){
+   group={text:line.slice(2),children:[]};system.children.push(group);parent=group;
+ } else if(line.includes(' | ')){
+   const [clue,diagnosis]=line.split(' | ');
+   parent.children.push({text:diagnosis,detail:clue,diagnosis:true});
+ } else throw Error('Malformed branch '+line);
+}
+const rootOrder=['Hematology & Lymphatics','Cardiovascular','Respiratory','Renal','Gastrointestinal','Endocrine','Reproductive','Musculoskeletal, Skin & Connective Tissue','Neurology & Special Senses','Psychiatry','Infectious Diseases','Immune & Multisystem Disorders'];
+const topics=rootOrder.map((label,i)=>({id:'system-'+i,label,node:systems.get(label)}));
+const all={text:'First Aid · Pathology Differentials',children:topics.map(item=>item.node)};
+let searchRoot=null;
+const index=[];
+const normalizeSearch=text=>text.normalize('NFKD').replace(/\p{Diacritic}/gu,'').toLowerCase();
+function addToIndex(node,systemName,trail){
+ if(node.diagnosis)index.push({node,trail,systemName,key:normalizeSearch(node.text+' '+node.detail)});
+ else for(const child of node.children)addToIndex(child,systemName,[...trail,node.text]);
+}
+for(const item of topics)addToIndex(item.node,item.label,[]);
+
+const main=document.querySelector('main');
+main.replaceChildren();
+const controls=document.createElement('div');
+controls.className='map-controls';
+controls.innerHTML='<label for="start-select">Starting point</label> <select id="start-select"><option value="all">All organ systems</option></select><button id="find-topic" type="button">Find diagnosis</button><button id="reset-map">Collapse all</button><button id="center-map">Center view</button><button id="fullscreen-map" type="button">Full screen</button><button id="print-map">Print</button><span class="map-hint">Drag to move · Select an arrow to expand</span>';
+const select=controls.querySelector('select');
+topics.forEach(t=>{const o=document.createElement('option');o.value=t.id;o.textContent=t.label;select.append(o);});
+const viewport=document.createElement('div');viewport.className='map-viewport';viewport.tabIndex=0;viewport.setAttribute('aria-label','Expandable flowchart. Drag to pan in any direction, or use the arrow keys.');
+
+
+const tree = document.createElement('div');
+tree.className = 'map-tree';
+viewport.append(tree);
+const svgNS = 'http://www.w3.org/2000/svg';
+let x = 0;
+let y = 0;
+let pan = null;
+
+function moveTo(left, top) {
+  x = left;
+  y = top;
+  tree.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+}
+
+function centerView() {
+  const root = tree.firstElementChild.firstElementChild;
+  moveTo((viewport.clientWidth - root.offsetWidth) / 2, (viewport.clientHeight - root.offsetHeight) / 2 - root.offsetTop);
+}
+
+viewport.addEventListener('pointerdown', event => {
+  if (pan || !event.isPrimary || event.button !== 0 || event.target.closest('button, a')) return;
+  pan = {pointerId: event.pointerId, clientX: event.clientX, clientY: event.clientY, x, y};
+  viewport.setPointerCapture(event.pointerId);
+  viewport.focus({preventScroll: true});
+  event.preventDefault();
+});
+
+viewport.addEventListener('pointermove', event => {
+  if (pan?.pointerId !== event.pointerId) return;
+  const dx = event.clientX - pan.clientX;
+  const dy = event.clientY - pan.clientY;
+  if (dx || dy) viewport.classList.add('is-panning');
+  moveTo(pan.x + dx, pan.y + dy);
+});
+
+function finishPan(event) {
+  if (pan?.pointerId !== event.pointerId) return;
+  pan = null;
+  viewport.classList.remove('is-panning');
+}
+
+viewport.addEventListener('pointerup', finishPan);
+viewport.addEventListener('pointercancel', finishPan);
+viewport.addEventListener('lostpointercapture', finishPan);
+viewport.addEventListener('wheel', event => {
+  if (event.ctrlKey) return;
+  const scale = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? viewport.clientHeight : 1;
+  const sideways = event.shiftKey && !event.deltaX;
+  moveTo(x - (sideways ? event.deltaY : event.deltaX) * scale, y - (sideways ? 0 : event.deltaY) * scale);
+  event.preventDefault();
+}, {passive: false});
+
+viewport.addEventListener('keydown', event => {
+  const directions = {ArrowLeft: [55, 0], ArrowRight: [-55, 0], ArrowUp: [0, 55], ArrowDown: [0, -55]};
+  if (event.target !== viewport || !directions[event.key]) return;
+  const [dx, dy] = directions[event.key];
+  moveTo(x + dx, y + dy);
+  event.preventDefault();
+});
+
+viewport.addEventListener('focusin', event => {
+  if (event.target === viewport || !event.target.matches(':focus-visible')) return;
+  const frame = viewport.getBoundingClientRect();
+  const button = event.target.getBoundingClientRect();
+  const margin = 18;
+  const dx = button.left < frame.left + margin ? frame.left + margin - button.left :
+    button.right > frame.right - margin ? frame.right - margin - button.right : 0;
+  const dy = button.top < frame.top + margin ? frame.top + margin - button.top :
+    button.bottom > frame.bottom - margin ? frame.bottom - margin - button.bottom : 0;
+  if (dx || dy) moveTo(x + dx, y + dy);
+});
+
+function updateConnectors() {
+  for (const group of tree.querySelectorAll('.tree-children:not([hidden])')) {
+    if (!group.offsetHeight) continue;
+    const svg = group.firstElementChild;
+    const middle = group.offsetHeight / 2;
+    const width = svg.clientWidth;
+    svg.replaceChildren();
+    for (const child of [...group.children].slice(1)) {
+      const box = child.firstElementChild;
+      const end = child.offsetTop + box.offsetTop + box.offsetHeight / 2;
+      const curve = document.createElementNS(svgNS, 'path');
+      curve.setAttribute('d', 'M 12 ' + middle + ' C ' + width * .55 + ' ' + middle + ', ' + width * .48 + ' ' + end + ', ' + width + ' ' + end);
+      svg.append(curve);
+    }
+  }
+}
+new ResizeObserver(updateConnectors).observe(viewport);
+
+main.append(viewport,controls);
+
+const browse=document.createElement('dialog');
+browse.className='atlas-dialog';
+browse.innerHTML='<form method="dialog" class="dialog-head"><h2>Find a diagnosis or clue</h2><button aria-label="Close search">Close</button></form><label for="atlas-search">Search diagnosis or finding</label><input id="atlas-search" type="search" placeholder="Try macrocytic, schistocytes, or Graves"><p class="atlas-status" role="status"></p><ol class="atlas-results"></ol>';
+main.append(browse);
+const input=browse.querySelector('input');
+const results=browse.querySelector('.atlas-results');
+const status=browse.querySelector('.atlas-status');
+
+function openResult(entry){
+ const [systemName,...headings]=entry.trail;
+ let branch=entry.node;
+ for(const text of headings.reverse())branch={text,children:[branch]};
+ searchRoot={text:systemName,children:[branch]};
+ let option=select.querySelector('option[value="search"]');
+ if(!option){option=new Option('', 'search');select.add(option,1);}
+ option.textContent=entry.node.text;
+ select.value='search';
+ browse.close();
+ reset();
+ let row=tree.firstElementChild;
+ while(row){
+   const button=row.querySelector('.tree-box > .tree-toggle');
+   if(!button)break;
+   button.click();
+   row=row.querySelector('.tree-children > .tree-row');
+ }
+ const terminal=row?.querySelector('.tree-box');
+ if(terminal){
+   const frame=viewport.getBoundingClientRect();
+   const box=terminal.getBoundingClientRect();
+   moveTo(x+frame.left+(frame.width-box.width)/2-box.left,y+frame.top+(frame.height-box.height)/2-box.top);
+ }
+ viewport.focus({preventScroll:true});
+}
+function search(){
+ const term=normalizeSearch(input.value.trim());
+ results.replaceChildren();
+ if(term.length<2){status.textContent='Enter at least two characters.';return;}
+ const terms=term.split(/\s+/);
+ const matches=index.filter(entry=>terms.every(word=>entry.key.includes(word)||entry.trail.some(text=>normalizeSearch(text).includes(word))));
+ matches.sort((a,b)=>Number(!normalizeSearch(a.node.text).includes(term))-Number(!normalizeSearch(b.node.text).includes(term)));
+ status.textContent=matches.length ? (matches.length>40?'Showing 40 of ':'')+matches.length+' matches' : 'No matching diagnosis or finding.';
+ for(const entry of matches.slice(0,40)){
+   const item=document.createElement('li');
+   const button=document.createElement('button');
+   const title=document.createElement('strong');title.textContent=entry.node.text;
+   const small=document.createElement('small');small.textContent=entry.systemName+' · '+entry.node.detail;
+   button.append(title,small);button.onclick=()=>openResult(entry);
+   item.append(button);results.append(item);
+ }
+}
+input.addEventListener('input',search);
+controls.querySelector('#find-topic').onclick=()=>{search();browse.showModal();input.focus();};
+
+let seq=0;
+function renderNode(data,depth=0){
+ const row=document.createElement('div');row.className='tree-row depth-'+Math.min(depth,3);
+ const box=document.createElement('div');box.className='tree-box';
+ const text=document.createElement('div');text.textContent=data.text;
+ if(data.diagnosis){
+   const clue=document.createElement('small');clue.className='diagnostic-clue';clue.textContent=data.detail;
+   const [lead,...rest]=data.detail.split(' · ');
+   if(rest.length && /[0-9]/.test(lead)){
+     const value=document.createElement('strong');value.className='numeric-cue';value.textContent=lead;
+     clue.replaceChildren(value,document.createTextNode(' · '+rest.join(' · ')));
+   }
+   text.className='diagnostic-result';
+   box.append(clue,text);
+ }else{box.append(text);}
+ row.append(box);
+ if(data.children?.length){
+  const button=document.createElement('button');button.className='tree-toggle';button.textContent='›';button.setAttribute('aria-label','Expand '+data.text);button.setAttribute('aria-expanded','false');
+  const group=document.createElement('div');group.className='tree-children';group.id='tree-group-'+(++seq);group.hidden=true;
+  button.setAttribute('aria-controls',group.id);
+  box.append(button);row.append(group);
+  button.onclick=()=>{
+   const open=group.hidden;
+   const top = box.getBoundingClientRect().top;
+   if (open && !group.childElementCount) {
+     const svg = document.createElementNS(svgNS, 'svg');
+     svg.setAttribute('class', 'tree-connectors');
+     svg.setAttribute('aria-hidden', 'true');
+     group.append(svg, ...data.children.map(child => renderNode(child, depth + 1)));
+   }
+   group.hidden=!open;button.textContent=open?'‹':'›';button.setAttribute('aria-expanded',String(open));button.setAttribute('aria-label',(open?'Collapse ':'Expand ')+data.text);
+   moveTo(x, y + top - box.getBoundingClientRect().top);
+   updateConnectors();
+  };
+ }
+ return row;
+}
+function reset() {
+  const topic = select.value === 'all' ? all : select.value === 'search' ? searchRoot : topics.find(item => item.id === select.value).node;
+  tree.replaceChildren(renderNode(topic));
+  centerView();
+}
+select.onchange = reset;
+controls.querySelector('#reset-map').onclick = reset;
+controls.querySelector('#center-map').onclick = centerView;
+controls.querySelector('#print-map').onclick = () => window.print();
+
+const fullscreenButton = controls.querySelector('#fullscreen-map');
+let expandedInBrowser = false;
+
+function syncFullscreen() {
+  const expanded = expandedInBrowser || document.fullscreenElement === main;
+  main.classList.toggle('map-fullscreen', expanded);
+  document.documentElement.classList.toggle('map-fullscreen', expanded);
+  fullscreenButton.textContent = expanded ? 'Exit full screen' : 'Full screen';
+}
+
+fullscreenButton.addEventListener('click', async () => {
+  if (document.fullscreenElement === main) {
+    await document.exitFullscreen();
+    return;
+  }
+  if (expandedInBrowser) {
+    expandedInBrowser = false;
+    syncFullscreen();
+    return;
+  }
+  if (document.fullscreenEnabled && main.requestFullscreen) {
+    try {
+      await main.requestFullscreen();
+      return;
+    } catch {
+      // A browser or embedded preview can block native fullscreen.
+    }
+  }
+  expandedInBrowser = true;
+  syncFullscreen();
+});
+document.addEventListener('fullscreenchange', syncFullscreen);
+document.addEventListener('keydown', event => {
+  if (event.key !== 'Escape' || !expandedInBrowser) return;
+  expandedInBrowser = false;
+  syncFullscreen();
+  fullscreenButton.focus({preventScroll: true});
+});
+
+document.body.classList.add('map-ready');
+reset();
+</script>
+</body>
+</html>
