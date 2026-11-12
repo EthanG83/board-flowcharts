@@ -406,6 +406,7 @@ let x = 0;
 let y = 0;
 let pan = null;
 let zoom = 1;
+const touchPointers = new Map();
 let touchPinch = null;
 let trackpadPinch = null;
 
@@ -421,6 +422,17 @@ function centerView() {
 }
 
 viewport.addEventListener('pointerdown', event => {
+  if (event.pointerType === 'touch') {
+    touchPointers.set(event.pointerId, event);
+    if (touchPointers.size >= 2) {
+      pan = null;
+      viewport.classList.remove('is-panning');
+      for (const id of touchPointers.keys()) viewport.setPointerCapture(id);
+      updateTouchPinch();
+      event.preventDefault();
+      return;
+    }
+  }
   if (pan || !event.isPrimary || event.button !== 0 || event.target.closest('button, a')) return;
   pan = {pointerId: event.pointerId, clientX: event.clientX, clientY: event.clientY, x, y};
   viewport.setPointerCapture(event.pointerId);
@@ -429,7 +441,14 @@ viewport.addEventListener('pointerdown', event => {
 });
 
 viewport.addEventListener('pointermove', event => {
-  if (touchPinch || pan?.pointerId !== event.pointerId) return;
+  if (touchPointers.has(event.pointerId)) {
+    touchPointers.set(event.pointerId, event);
+    if (touchPointers.size >= 2) {
+      updateTouchPinch(true);
+      return;
+    }
+  }
+  if (pan?.pointerId !== event.pointerId) return;
   const dx = event.clientX - pan.clientX;
   const dy = event.clientY - pan.clientY;
   if (dx || dy) viewport.classList.add('is-panning');
@@ -442,9 +461,19 @@ function finishPan(event) {
   viewport.classList.remove('is-panning');
 }
 
-viewport.addEventListener('pointerup', finishPan);
-viewport.addEventListener('pointercancel', finishPan);
-viewport.addEventListener('lostpointercapture', finishPan);
+function finishPointer(event) {
+  if (touchPointers.delete(event.pointerId)) {
+    touchPinch = null;
+    updateTouchPinch();
+  }
+  finishPan(event);
+}
+
+viewport.addEventListener('pointerup', finishPointer);
+viewport.addEventListener('pointercancel', finishPointer);
+viewport.addEventListener('lostpointercapture', event => {
+  if (event.target === viewport && !viewport.hasPointerCapture(event.pointerId)) finishPointer(event);
+});
 function zoomAt(factor, clientX, clientY, previousX = clientX, previousY = clientY) {
   const frame = viewport.getBoundingClientRect();
   const nextZoom = Math.min(3, Math.max(0.25, zoom * factor));
@@ -464,43 +493,32 @@ viewport.addEventListener('wheel', event => {
   else if (event.deltaX) moveTo(x - event.deltaX * unit, y);
 }, {passive: false});
 
-function updateTouchPinch(event) {
-  if (event.touches.length < 2) {
-    touchPinch = null;
-    return;
-  }
-  const [first, second] = event.touches;
+function updateTouchPinch(applyZoom = false) {
+  if (touchPointers.size < 2) return;
+  const [first, second] = touchPointers.values();
   const next = {
     x: (first.clientX + second.clientX) / 2,
     y: (first.clientY + second.clientY) / 2,
     distance: Math.hypot(first.clientX - second.clientX, first.clientY - second.clientY)
   };
-  event.preventDefault();
-  pan = null;
-  trackpadPinch = null;
-  viewport.classList.remove('is-panning');
-  if (touchPinch?.distance && event.type === 'touchmove') {
+  if (applyZoom && touchPinch?.distance && next.distance) {
     zoomAt(next.distance / touchPinch.distance, next.x, next.y, touchPinch.x, touchPinch.y);
   }
   touchPinch = next;
 }
 
-for (const type of ['touchstart', 'touchmove', 'touchend', 'touchcancel']) {
-  viewport.addEventListener(type, updateTouchPinch, {passive: false});
-}
-
 // Safari exposes trackpad pinches as gesture events.
 viewport.addEventListener('gesturestart', event => {
   event.preventDefault();
-  if (!touchPinch) trackpadPinch = {scale: 1, x: event.clientX, y: event.clientY};
+  trackpadPinch = {scale: 1, x: event.clientX, y: event.clientY};
 }, {passive: false});
 viewport.addEventListener('gesturechange', event => {
   event.preventDefault();
-  if (!trackpadPinch || touchPinch || !event.scale) return;
+  if (!trackpadPinch || !event.scale) return;
   const frame = viewport.getBoundingClientRect();
   const anchorX = trackpadPinch.x ?? frame.left + frame.width / 2;
   const anchorY = trackpadPinch.y ?? frame.top + frame.height / 2;
-  zoomAt(event.scale / trackpadPinch.scale, anchorX, anchorY);
+  if (!touchPinch) zoomAt(event.scale / trackpadPinch.scale, anchorX, anchorY);
   trackpadPinch.scale = event.scale;
 }, {passive: false});
 viewport.addEventListener('gestureend', event => {
