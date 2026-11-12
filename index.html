@@ -128,7 +128,7 @@ main.wrap { width: 100%; }
 }
 .map-viewport:focus-visible { outline: 2px solid #64f6e7; outline-offset: -3px; }
 .map-viewport.is-panning, .map-viewport.is-panning .tree-toggle { cursor: grabbing; }
-.map-tree { position: absolute; inset: 0 auto auto 0; width: max-content; user-select: none; }
+.map-tree { position: absolute; inset: 0 auto auto 0; width: max-content; user-select: none; transform-origin: 0 0; }
 .tree-row {
   --neon: #bc9aff;
   --node-fill: #191125;
@@ -392,10 +392,10 @@ const main=document.querySelector('main');
 main.replaceChildren();
 const controls=document.createElement('div');
 controls.className='map-controls';
-controls.innerHTML='<label for="start-select">Starting point</label> <select id="start-select"><option value="all">Entire flowchart</option></select><button id="find-topic" type="button">Find diagnosis or drug</button><button id="reset-map">Collapse all</button><button id="center-map">Center view</button><button id="fullscreen-map" type="button">Full screen</button><button id="print-map">Print</button><span class="map-hint">Drag to move · Select an arrow to expand</span>';
+controls.innerHTML='<label for="start-select">Starting point</label> <select id="start-select"><option value="all">Entire flowchart</option></select><button id="find-topic" type="button">Find diagnosis or drug</button><button id="reset-map">Collapse all</button><button id="center-map">Center view</button><button id="fullscreen-map" type="button">Full screen</button><button id="print-map">Print</button><span class="map-hint">Drag to move · Pinch or scroll to zoom</span>';
 const select=controls.querySelector('select');
 topics.forEach(t=>{const o=document.createElement('option');o.value=t.id;o.textContent=t.label;select.append(o);});
-const viewport=document.createElement('div');viewport.className='map-viewport';viewport.tabIndex=0;viewport.setAttribute('aria-label','Expandable flowchart. Drag to pan in any direction, or use the arrow keys.');
+const viewport=document.createElement('div');viewport.className='map-viewport';viewport.tabIndex=0;viewport.setAttribute('aria-label','Expandable flowchart. Drag or use arrow keys to pan. Pinch or scroll to zoom.');
 
 
 const tree = document.createElement('div');
@@ -405,16 +405,19 @@ const svgNS = 'http://www.w3.org/2000/svg';
 let x = 0;
 let y = 0;
 let pan = null;
+let zoom = 1;
+let touchPinch = null;
+let trackpadPinch = null;
 
 function moveTo(left, top) {
   x = left;
   y = top;
-  tree.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+  tree.style.transform = 'translate(' + x + 'px, ' + y + 'px) scale(' + zoom + ')';
 }
 
 function centerView() {
   const root = tree.firstElementChild.firstElementChild;
-  moveTo((viewport.clientWidth - root.offsetWidth) / 2, (viewport.clientHeight - root.offsetHeight) / 2 - root.offsetTop);
+  moveTo((viewport.clientWidth - root.offsetWidth * zoom) / 2, (viewport.clientHeight - root.offsetHeight * zoom) / 2 - root.offsetTop * zoom);
 }
 
 viewport.addEventListener('pointerdown', event => {
@@ -426,7 +429,7 @@ viewport.addEventListener('pointerdown', event => {
 });
 
 viewport.addEventListener('pointermove', event => {
-  if (pan?.pointerId !== event.pointerId) return;
+  if (touchPinch || pan?.pointerId !== event.pointerId) return;
   const dx = event.clientX - pan.clientX;
   const dy = event.clientY - pan.clientY;
   if (dx || dy) viewport.classList.add('is-panning');
@@ -442,12 +445,67 @@ function finishPan(event) {
 viewport.addEventListener('pointerup', finishPan);
 viewport.addEventListener('pointercancel', finishPan);
 viewport.addEventListener('lostpointercapture', finishPan);
+function zoomAt(factor, clientX, clientY, previousX = clientX, previousY = clientY) {
+  const frame = viewport.getBoundingClientRect();
+  const nextZoom = Math.min(3, Math.max(0.25, zoom * factor));
+  const ratio = nextZoom / zoom;
+  zoom = nextZoom;
+  moveTo(
+    clientX - frame.left - (previousX - frame.left - x) * ratio,
+    clientY - frame.top - (previousY - frame.top - y) * ratio
+  );
+}
+
 viewport.addEventListener('wheel', event => {
-  if (event.ctrlKey) return;
-  const scale = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? viewport.clientHeight : 1;
-  const sideways = event.shiftKey && !event.deltaX;
-  moveTo(x - (sideways ? event.deltaY : event.deltaX) * scale, y - (sideways ? 0 : event.deltaY) * scale);
   event.preventDefault();
+  if (trackpadPinch || touchPinch) return;
+  const unit = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? viewport.clientHeight : 1;
+  if (event.deltaY) zoomAt(Math.exp(-event.deltaY * unit * 0.002), event.clientX, event.clientY);
+  else if (event.deltaX) moveTo(x - event.deltaX * unit, y);
+}, {passive: false});
+
+function updateTouchPinch(event) {
+  if (event.touches.length < 2) {
+    touchPinch = null;
+    return;
+  }
+  const [first, second] = event.touches;
+  const next = {
+    x: (first.clientX + second.clientX) / 2,
+    y: (first.clientY + second.clientY) / 2,
+    distance: Math.hypot(first.clientX - second.clientX, first.clientY - second.clientY)
+  };
+  event.preventDefault();
+  pan = null;
+  trackpadPinch = null;
+  viewport.classList.remove('is-panning');
+  if (touchPinch?.distance && event.type === 'touchmove') {
+    zoomAt(next.distance / touchPinch.distance, next.x, next.y, touchPinch.x, touchPinch.y);
+  }
+  touchPinch = next;
+}
+
+for (const type of ['touchstart', 'touchmove', 'touchend', 'touchcancel']) {
+  viewport.addEventListener(type, updateTouchPinch, {passive: false});
+}
+
+// Safari exposes trackpad pinches as gesture events.
+viewport.addEventListener('gesturestart', event => {
+  event.preventDefault();
+  if (!touchPinch) trackpadPinch = {scale: 1, x: event.clientX, y: event.clientY};
+}, {passive: false});
+viewport.addEventListener('gesturechange', event => {
+  event.preventDefault();
+  if (!trackpadPinch || touchPinch || !event.scale) return;
+  const frame = viewport.getBoundingClientRect();
+  const anchorX = trackpadPinch.x ?? frame.left + frame.width / 2;
+  const anchorY = trackpadPinch.y ?? frame.top + frame.height / 2;
+  zoomAt(event.scale / trackpadPinch.scale, anchorX, anchorY);
+  trackpadPinch.scale = event.scale;
+}, {passive: false});
+viewport.addEventListener('gestureend', event => {
+  event.preventDefault();
+  trackpadPinch = null;
 }, {passive: false});
 
 viewport.addEventListener('keydown', event => {
@@ -660,6 +718,7 @@ function renderNode(data,depth=0){
 }
 function reset() {
   const topic = select.value === 'all' ? all : select.value === 'search' ? searchRoot : topics.find(item => item.id === select.value).node;
+  zoom = 1;
   tree.replaceChildren(renderNode(topic));
   centerView();
 }
